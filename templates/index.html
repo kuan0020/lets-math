@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="static/css/style.css" type="text/css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="calculator">
+        <div class="message_holder">
+            <ul id='events' class='scrollable'>
+                {% for msg in messages %}
+                <li> {{msg.message}} </li>
+                {% endfor %}
+            </ul>
+        </div>
+        <input type="text" class="calc-screen" value="0" disabled />
+
+        <div class="calculator-keys">
+            <input type="text" class="username" placeholder="User Name" size="39" autofocus/>
+            <button type="button" class="resetC" value="resetC">AC</button>
+            <button type="button" class="negate" value="negate">+/-</button>
+            <button type="button" class="operator mod-sign" value="%">Mod</button>
+            <button type="button" class="operator" value="/">&divide;</button>
+
+            <button type="button" value="7">7</button>
+            <button type="button" value="8">8</button>
+            <button type="button" value="9">9</button>
+            <button type="button" class="operator" value="*">&times;</button>
+
+            <button type="button" value="4">4</button>
+            <button type="button" value="5">5</button>
+            <button type="button" value="6">6</button>
+            <button type="button" class="operator" value="-">-</button>
+
+            <button type="button" value="1">1</button>
+            <button type="button" value="2">2</button>
+            <button type="button" value="3">3</button>
+            <button type="button" class="operator" value="+">+</button>
+
+            <button type="button" value="0">0</button>
+            <button type="button" class="decimal" value=".">.</button>
+            <button type="button" class="del-digit del-key" value="del">DEL</button>
+            <button type="button" class="equal-sign operator" value="=" id='equalButton'>=</button>
+
+        </div>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.4.5/socket.io.min.js"></script>
+    <script type="text/javascript" src="static/js/main.js"></script>
+
+</body>
+
+
+
+</html>

@@ -1,0 +1,143 @@
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    height: 100%;
+    background-color: #252525;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+h2 {
+    font-size: xx-large;
+}
+
+ul {
+    width: 100%;
+    height: 120px;
+    border: 2px solid #ccc;
+    background-color: #181818;
+    color: #FBFAF5;
+    text-align: left;
+    padding-right: 20px;
+    padding-left: 10px;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    overflow-y: scroll;
+}
+
+.scrollable {
+    scrollbar-width: thin;
+}
+
+li {
+    font-size: large;
+    font-family: Comfortaa;
+    text-indent: .2em;
+    margin-top: 10px;
+}
+
+.calculator {
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    justify-content: center;
+    width: 400px;
+    padding: 15px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.calc-screen {
+    width: 100%;
+    font-size: 5rem;
+    height: 80px;
+    border: 2px solid #ccc;
+    background-color: #181818;
+    color: #FBFAF5;
+    text-align: right;
+    padding-right: 20px;
+    padding-left: 10px;
+    border-radius: 10px;
+    font-family: Comfortaa;
+}
+
+.username {
+    padding: 13px;
+    margin-top: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-family: Comfortaa;
+    grid-area: 1/1/1/5;
+}
+
+.calculator-keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 18px;
+    margin: 20px;
+}
+
+button {
+    height: 60px;
+    background-color: #fff;
+    border-radius: 5px;
+    border: 2px solid #ccc;
+    background-color: transparent;
+    font-size: 2rem;
+    color: #FBEEE4;
+    font-family: Comfortaa;
+}
+
+button:hover {
+    background-color: #FBEEE4;
+    border: 2px solid #252525;
+    color: #252525;
+}
+
+.operator {
+    color: #4aaff3;
+    font-size: xx-large;
+}
+
+.resetC {
+    background-color: #e24f54;
+    border-color: #b3363a;
+    color: #fff;
+}
+
+.resetC:hover {
+    background-color: #f17377;
+}
+
+.equal-sign {
+    background-color: #2e86c0;
+    border-color: #276a97;
+    color: #fff;
+    height: 100%;
+}
+
+.equal-sign:hover {
+    background-color: #4e9ed4;
+}
+
+.mod-sign {
+    font-size: large;
+}
+
+.del-key {
+    background-color: rgb(235, 157, 85);
+    border-color: rgb(235, 156, 11);
+    color: #fff;
+}
+
+.del-key :hover {
+    background-color: rgb(250, 219, 179);
+}
+
