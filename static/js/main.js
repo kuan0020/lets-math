@@ -67,7 +67,7 @@ function handleDigit(digit) {
 function handleDot() {
     // Case where the Left & Operator is ready, Right starts with 0.
     if (calculator.rightValStatus === true) {
-        calculator.screenVal = "0."
+        calculator.screenVal = '0.'
         calculator.rightValStatus = false;
         return;
     }
@@ -136,11 +136,11 @@ function handleOperator(newOperator) {
     else if (operator) {
         const result = calculate(leftVal, sV_flt, operator); // Calculate depending on which operator
         op_num['op_num'] = [calculator.leftVal, operator, sV_flt, result]; // update op_num
-        var appdir = "/calculation" // Python Flask route, op_num will be passed to that route
+        var appdir = '/calculation' // Python Flask route, op_num will be passed to that route
 
         // Sends op_num to Python Flask as a json
         $.ajax({
-            type: "POST",
+            type: 'POST',
             url: server + appdir,
             data: encodeURIComponent(JSON.stringify(op_num)),
             dataType: 'json'
@@ -151,7 +151,7 @@ function handleOperator(newOperator) {
         var socket = io.connect('http://' + document.domain + ':' + location.port); // socketio connect 
 
         socket.on('connect', function() {
-            // emit to "calc event"
+            // emit to 'calc event'
             socket.emit('calc event', {
                 data: 'User Connected',
                 user_name: $('input.username').val()
@@ -183,10 +183,10 @@ var socket = io.connect('http://' + document.domain + ':' + location.port); // s
 
 // Update the calculation history by adding most recent calculations to the top of the list
 socket.on('message', function(msg) {
-    var ul = document.getElementById("events");
-    var li = document.createElement("li");
+    var ul = document.getElementById('events');
+    var li = document.createElement('li');
     var children = ul.children.length + 1
-    li.setAttribute("id", "element" + children)
+    li.setAttribute('id', 'element' + children)
     li.insertBefore(document.createTextNode(msg), li.childNodes[0]);
     ul.insertBefore(li, ul.childNodes[0])
 })

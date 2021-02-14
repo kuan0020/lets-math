@@ -55,13 +55,13 @@ def handle_calc_event(json, methods=['GET', 'POST']):
     res = round(res, 7)
     
     if type(left) == int and numLen(left) >= 7:
-        left = "{:.2e}".format(left)
+        left = '{:.2e}'.format(left)
         
     if type(right) == int and numLen(right) >= 7:
-        right = "{:.2e}".format(right)
+        right = '{:.2e}'.format(right)
     
     if type(res) == int and numLen(res) >= 7:
-        res = "{:.2e}".format(res)
+        res = '{:.2e}'.format(res)
     
     if json['user_name'] == '':
         json['user_name'] = 'Anonymous'
@@ -76,5 +76,5 @@ def handle_calc_event(json, methods=['GET', 'POST']):
     else:
         pass
     
-if __name__ == "__main__":
+if __name__ == '__main__':
     app.run()

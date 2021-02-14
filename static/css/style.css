@@ -141,3 +141,20 @@ button:hover {
     background-color: rgb(250, 219, 179);
 }
 
+.footer {
+    font-size: medium;
+    font-family: Comfortaa;
+    position: fixed;
+    padding: 7px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #121212;
+    color: white;
+    text-align: center;
+  }
+
+a {
+    color: #4e9ed4;
+}
+
